@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>字根花園｜背單字</title>
+    <link rel="stylesheet" href="word-garden.css" />
+</head>
+<body>
+  <main class="wrap">
+    <header><div><h1>字根<span>花園</span></h1><p class="sub">把每個新單字，種成自己的語言記憶。</p></div><div class="count" id="count">0 個單字</div></header>
+    <nav class="tabs"><button class="tab active" data-tab="study">翻卡複習</button><button class="tab" data-tab="spelling">拼單字</button><button class="tab" data-tab="add">新增單字</button><button class="tab" data-tab="list">我的單字</button><button class="tab" data-tab="folders">資料夾管理</button></nav>
+    <section class="panel active" id="study"><div class="card study" id="studyArea"></div></section>
+    <section class="panel" id="spelling"><div class="card study" id="spellingArea"></div></section>
+    <section class="panel" id="add"><div class="card"><h2>加入一個新單字</h2><div class="form-grid"><label>英文單字<input id="english" autocomplete="off" placeholder="例如: predict" /></label><label>中文意思<input id="chinese" autocomplete="off" placeholder="例如: 預測" /></label><label>放入資料夾<select id="folder"></select></label><label>新增資料夾（選填）<input id="newFolder" autocomplete="off" placeholder="例如: 多益核心單字" /></label><label class="wide">你的例句或備註（選填）<input id="note" autocomplete="off" placeholder="例如: The weather report predicts rain." /></label></div><button class="primary" id="addBtn">種下這個單字</button><p class="hint">填入新資料夾名稱，即可建立新分類；測驗時可指定只考某一資料夾。</p><p class="message" id="message"></p></div></section>
+    <section class="panel" id="list"><div class="list-head"><h2>我的單字</h2><input class="filter" id="search" placeholder="搜尋英文或中文" /></div><div class="word-list" id="wordList"></div></section>
+    <section class="panel" id="folders"><div class="card"><h2>資料夾管理</h2><div class="form-grid"><label class="wide">新增資料夾<input id="folderName" autocomplete="off" placeholder="例如: 旅行英文" /></label></div><button class="primary" id="createFolder">建立資料夾</button><p class="message" id="folderMessage"></p><div class="word-list" id="folderList" style="margin-top:18px"></div></div></section>
+  </main>
+<script src="word-garden.js"></script></body></html>
+
